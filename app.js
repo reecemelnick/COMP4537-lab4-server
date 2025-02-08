@@ -61,7 +61,7 @@ http.createServer(function (req, res) {
     });
   }
 
-  if(req.method === "GET") {
+  if(req.method === "GET" && req.url.startsWith('api/definitions')) {
 
     currentReq++;
   
@@ -82,7 +82,7 @@ http.createServer(function (req, res) {
     
   }
 
-}).listen(process.env.PORT ||  8888);
+}).listen(process.env.PORT || 8888);
 
 
 let addToDict = (word) => {
@@ -111,6 +111,11 @@ let checkDict = (word) => {
 }
 
 let validateInput = (str) => {
+
+  if(!str) {
+    return false;
+  }
+
   let numbers = "0123456789";
 
   if(str.length === 0) {
