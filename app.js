@@ -24,6 +24,12 @@ http.createServer(function (req, res) {
       return;
     }
 
+    if (req.url === '/api/definitions') {
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      res.end("Server is running...");
+      return;
+    }
+
     if (req.url === '/favicon.ico') {
       res.writeHead(204);
       res.end();
@@ -31,6 +37,8 @@ http.createServer(function (req, res) {
     }
 
   if(req.method === "POST" && req.url === '/api/definitions') {
+
+    
       currentReq++;
 
       let body = "";
