@@ -18,6 +18,18 @@ http.createServer(function (req, res) {
     return res.end();
 }
 
+    if (req.url === '/') {
+      res.writeHead(200, { "Content-Type": "text/plain" });
+      res.end("Server is running...");
+      return;
+    }
+
+    if (req.url === '/favicon.ico') {
+      res.writeHead(204);
+      res.end();
+      return;
+    }
+
   if(req.method === "POST" && req.url === '/api/definitions') {
       currentReq++;
 
