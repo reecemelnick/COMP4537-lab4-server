@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
       return;
     }
 
-    if (req.url === '/api/definitions') {
+    if (req.url === '/api/definitions/') {
       res.writeHead(200, { "Content-Type": "text/plain" });
       res.end("Server is running...");
       return;
@@ -36,7 +36,7 @@ http.createServer(function (req, res) {
       return;
     }
 
-  if(req.method === "POST" && req.url === '/api/definitions') {
+  if(req.method === "POST" && req.url === '/api/definitions/') {
 
     
       currentReq++;
