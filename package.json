@@ -1,0 +1,21 @@
+{
+  "name": "comp4537-lab4-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reecemelnick/COMP4537-lab4-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reecemelnick/COMP4537-lab4-server/issues"
+  },
+  "homepage": "https://github.com/reecemelnick/COMP4537-lab4-server#readme"
+}
