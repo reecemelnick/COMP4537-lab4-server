@@ -81,7 +81,7 @@ http.createServer(function (req, res) {
     });
   }
 
-  if(req.method === "GET" && req.url.startsWith('api/definitions')) {
+  if(req.method === "GET" && req.url.startsWith('/api/definitions/')) {
 
     currentReq++;
   
