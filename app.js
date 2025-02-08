@@ -6,6 +6,7 @@ let dictionary = [];
 let currentReq = 0;
 
 http.createServer(function (req, res) {
+
   console.log("The server received a request");
 
   if (req.method === "OPTIONS") {
@@ -17,7 +18,7 @@ http.createServer(function (req, res) {
     return res.end();
 }
 
-  if(req.method === "POST") {
+  if(req.method === "POST" && req.url === '/api/definitions') {
       currentReq++;
 
       let body = "";
