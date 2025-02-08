@@ -81,7 +81,7 @@ http.createServer(function (req, res) {
     
   }
 
-}).listen(8888);
+}).listen(process.env.PORT ||  8888);
 
 
 let addToDict = (word) => {
