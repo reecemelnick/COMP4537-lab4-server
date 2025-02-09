@@ -30,6 +30,9 @@ http.createServer(function (req, res) {
       return;
     }
 
+    console.log("Method:", req.method);
+console.log("URL:", req.url);
+
   if(req.method === "POST" && req.url === '/api/definitions/') {
       
       console.log("in post request");
