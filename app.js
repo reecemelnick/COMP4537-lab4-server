@@ -63,6 +63,7 @@ console.log("URL:", req.url);
             if(!valid) {
               res.writeHead(400, { "Content-Type": "text/plain", "Access-Control-Allow-Origin": "*" });
               res.end("Invalid input");
+              return;
             } 
 
             let added = addToDict(data);
@@ -91,6 +92,7 @@ console.log("URL:", req.url);
     if(!valid) {
       res.writeHead(400, { "Content-Type": "text/plain", "Access-Control-Allow-Origin": "*" });
       res.end("Invalid input");
+      return;
     }
 
     let desc = checkDict(qdata.word);
@@ -101,11 +103,11 @@ console.log("URL:", req.url);
   }
 
 
-  if (req.url === '/api/definitions/') {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Server is running...");
-    return;
-  }
+  // if (req.url === '/api/definitions/') {
+  //   res.writeHead(200, { "Content-Type": "text/plain" });
+  //   res.end("Server is running...");
+  //   return;
+  // }
 
 }).listen(process.env.PORT || 8888);
 
